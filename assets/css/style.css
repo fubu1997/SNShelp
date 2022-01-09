@@ -374,10 +374,10 @@ input[type="radio"] {
 
 /* Selectpicker */
 select {
-  position: absolute !important;
+  position: absolute;
   bottom: 0;
   left: 50%;
-  display: block !important;
+  display: block;
   width: 0.5px !important;
   height: 100% !important;
   padding: 0 !important;
@@ -674,7 +674,7 @@ body {
   padding: 0;
   font-size: 16px;
   position: relative;
-  color: #26272d;
+  color: white;
   line-height: 26px;
 }
 
@@ -721,13 +721,13 @@ body {
 .navbar-toggle:hover,
 .navbar-toggle[aria-expanded="true"] {
   background-color: #fff;
-  border-color: #000;
+  border-color: white;
   cursor: pointer;
 }
 
 .navbar-toggle:hover .icon-bar,
 .navbar-toggle[aria-expanded="true"] .icon-bar {
-  background-color: #000;
+  background-color: white;
 }
 
 .navbar-toggle .icon-bar {
@@ -810,17 +810,19 @@ body {
   position: relative;
   margin: 45px 0 30px;
   font-size: 20px;
-  color: #26272d;
+  color: white;
 }
 
 .hero-text .btn {
   position: relative;
-  background-color: transparent;
+  background-color: rgba(197, 174, 174, 0.301);
+  color: white;
+  font-weight: bolder;
 }
 
 .hero-text .btn:hover {
-  background-color: #26272d;
-  color: #fff;
+  background-color: white;
+  color: black;
 }
 
 .hero .breadcrumb {
