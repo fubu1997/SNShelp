@@ -32,9 +32,18 @@
   text-align: center;
 }
 
+.seviceContainer {
+  width: 90%;
+  height: 80%;
+  margin: auto;
+}
+
 #instarSevice {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline;
+  margin: 3px;
   cursor: pointer;
+}
+
+#instarSevice img {
+  width: 20%;
 }
