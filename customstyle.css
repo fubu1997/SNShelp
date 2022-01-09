@@ -1,0 +1,13 @@
+.service_icon {
+  display: flex;
+  justify-content: center;
+}
+
+.service_icon div {
+  margin-top: 10px;
+}
+
+.footerBox {
+  position: absolute;
+  bottom: 0%;
+}
