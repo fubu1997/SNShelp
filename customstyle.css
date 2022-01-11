@@ -28,8 +28,42 @@
   margin: auto;
   border: 5px solid white;
   border-radius: 10px;
-  background-color: lightslategray;
+  background-color: rgba(18, 21, 24, 0.5);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.이용방법페이지 p {
+  text-align: left;
+  margin: 5px;
+}
+.이용방법페이지 h3 {
+  text-align: left;
+}
+.이용방법페이지 button {
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+  padding: 5px;
+  color: rgb(44, 39, 39);
+  background-color: beige;
+  margin-left: 5px;
+}
+.이용방법페이지 button:hover {
+  color: white;
+  background-color: rgba(18, 21, 24, 0.5);
+}
+
+.서비스소개 {
+  width: 80%;
+}
+.사용방법카톡 {
+  width: 80%;
+}
+.사용방법인스타 {
+  width: 80%;
 }
 
 .seviceContainer {
@@ -38,12 +72,12 @@
   margin: auto;
 }
 
-#instarSevice {
+#serviceImg {
   display: inline;
   margin: 3px;
   cursor: pointer;
 }
 
-#instarSevice img {
+#serviceImg img {
   width: 20%;
 }
