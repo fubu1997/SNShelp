@@ -1,3 +1,24 @@
+.mainImg {
+  max-width: 890px;
+  width: 100%;
+  margin: 10px auto;
+  padding: 0 15px;
+  text-align: center;
+}
+.mainImg img {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  .mainImg img {
+    width: 60px;
+    height: 60px;
+    margin: 8px;
+  }
+}
+
 .service_icon {
   display: flex;
   justify-content: center;
@@ -50,7 +71,7 @@
   padding: 5px;
   color: rgb(44, 39, 39);
   background-color: beige;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 .이용방법페이지 button:hover {
   color: white;
