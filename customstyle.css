@@ -23,9 +23,10 @@
 }
 .이용방법페이지 {
   max-width: 890px;
-  width: 100%;
+  width: 80%;
   height: 80%;
   margin: auto;
+  padding: 40px 0;
   border: 5px solid white;
   border-radius: 10px;
   background-color: rgba(18, 21, 24, 0.5);
@@ -87,4 +88,19 @@
 
 #serviceImg img {
   width: 20%;
+}
+
+footer {
+  display: block;
+  background-color: rgba(18, 21, 24, 0);
+  width: 100%;
+  height: 65px;
+  bottom: 0px;
+  position: absolute;
+  padding: 5px;
+}
+
+footer p {
+  font-size: 10px;
+  margin: 0px;
 }

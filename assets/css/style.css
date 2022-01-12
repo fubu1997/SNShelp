@@ -791,6 +791,7 @@ body {
   display: table-cell;
   vertical-align: middle;
   padding-top: 75px;
+  padding-bottom: 75px;
 }
 
 .hero-text {
