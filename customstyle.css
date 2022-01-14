@@ -111,6 +111,53 @@
   width: 20%;
 }
 
+/* 주문탭 */
+.주문탭 {
+  max-width: 890px;
+  width: 80%;
+  border: 1px solid white;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px auto;
+  padding: 10px;
+}
+.주문탭 input {
+  width: 60%;
+  margin: 10px;
+  text-align: center;
+}
+/* 주문탭 */
+
+/* form */
+.form-group {
+  max-width: 890px;
+  width: 80%;
+  height: 20%;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  background-color: rgba(18, 21, 24, 0.5);
+}
+
+.form-group label {
+  font-size: 20px;
+  display: block;
+}
+
+select,
+.form-group input {
+  text-align: center;
+  width: 80%;
+  height: 30px;
+  margin: 10px auto;
+  color: black;
+  padding: 5px;
+}
+/* form */
+
+/* footer */
 footer {
   display: block;
   background-color: rgba(18, 21, 24, 0);
@@ -125,3 +172,4 @@ footer p {
   font-size: 10px;
   margin: 0px;
 }
+/* footer */

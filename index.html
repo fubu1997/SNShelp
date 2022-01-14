@@ -43,6 +43,7 @@
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <link href="/customstyle.css" rel="stylesheet" />
+    <link href="/assets/css/table.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -60,6 +61,7 @@
                 <a href="index.html">홈</a>
               </li>
               <li><a href="/method.html">이용방법</a></li>
+              <li><a href="/method.html">주문하기</a></li>
               <li><a href="/service.html">서비스목록</a></li>
               <li><a href="/price.html">가격표</a></li>
             </ul>
@@ -73,9 +75,8 @@
         <div class="hero-text">
           <h1>Social SNS Marketer</h1>
           <p>1대1 맞춤 SNS 관리 솔루션</p>
-          <p>고객님의 SNS를 분석 맞춤서비스를 제공합니다.</p>
-          <p>SNS 마케팅서비스를 지속적으로 필요한 고객맞춤 서비스입니다.</p>
-          <a href="/method.html" class="btn btn-border enjoyBtn">이용하기</a>
+          <a class="btn btn-border">이용방법</a>
+          <a class="btn btn-border">주문하기</a>
         </div>
 
         <section class="mainImg">
@@ -92,6 +93,73 @@
             <img src="/assets/img/web.png" />
           </div>
         </section>
+        <div class="주문탭">
+          <h4>주문탭</h4>
+          <span>Target : </span>
+          <input
+            class="instarID"
+            type="text"
+            placeholder="인스타 아이디 및 게시물 주소를 입력해주세요"
+          />
+          <p>
+            전송멘트 :
+            <span
+              >인스타그램 / <span class="넘버">Num</span> /
+              <span class="수량">수량</span> / <span class="가격">가격</span> /
+              <span class="주소">인스타ID or 게시글</span>
+            </span>
+          </p>
+        </div>
+
+        <form id="instarOrderContainer">
+          <div class="form-group instarOrderPage active">
+            <h4>Instargram</h4>
+
+            <label for="instarOrder">서비스목록</label>
+            <select name="instarOrder" id="instarOrder">
+              <option>인스타그램 서비스를 선택해주세요</option>
+              <option value="instar1">도달범위↑, 노출빈도↑,프로필방문</option>
+              <option value="instar2">게시글 좋아요</option>
+              <option value="instar3">한국인 팔로워</option>
+              <option value="instar4">한국인 팔로워[남성]</option>
+              <option value="instar5">한국인 팔로워[여성]</option>
+              <option value="instar6">외국인 팔로워</option>
+              <option value="instar7">커스텀 댓글</option>
+              <option value="instar8">이모지 댓글</option>
+              <option value="instar9">랜덤 댓글</option>
+            </select>
+            <label>주문수량</label>
+            <input type="text" placeholder="주문수량" />
+            <label>금액[원]</label>
+            <input type="text" placeholder="금액" />
+            <div class="tg-wrap">
+              <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-c3ow">Num</th>
+                    <th class="tg-c3ow">품질</th>
+                    <th class="tg-c3ow">가격 / 1000개당</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-c3ow">1</td>
+                    <td class="tg-c3ow">저</td>
+                    <td class="tg-c3ow">10,000원</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="formBtn">
+              <a href="/method.html" class="btn btn-border enjoyBtn"
+                >이용방법</a
+              >
+              <a href="/method.html" class="btn btn-border enjoyBtn"
+                >주문하기</a
+              >
+            </div>
+          </div>
+        </form>
 
         <footer>
           <p>CopyRight @ fubu1997</p>
@@ -106,5 +174,6 @@
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="/assets/js/ordertap.js"></script>
   </body>
 </html>
