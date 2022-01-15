@@ -81,16 +81,16 @@
 
         <section class="mainImg">
           <div class="mainImg01">
-            <img src="/assets/img/instar.png" />
-            <img src="/assets/img/youtube.png" />
-            <img src="/assets/img/tiktok.png" />
-            <img src="/assets/img/facebook.png" />
+            <img src="/assets/img/instar.png" class="instarIMG" />
+            <img src="/assets/img/youtube.png" class="youtubeIMG" />
+            <img src="/assets/img/tiktok.png" class="tiktokIMG" />
+            <img src="/assets/img/facebook.png" class="facebookIMG" />
           </div>
           <div class="mainImg02">
-            <img src="/assets/img/twitter.png" />
-            <img src="/assets/img/Pinterest.png" />
-            <img src="/assets/img/Telegram.png" />
-            <img src="/assets/img/web.png" />
+            <img src="/assets/img/twitter.png" class="twitterIMG" />
+            <img src="/assets/img/Pinterest.png" class="pinterestIMG" />
+            <img src="/assets/img/Telegram.png" class="telegramIMG" />
+            <img src="/assets/img/web.png" class="webIMG" />
           </div>
         </section>
         <div class="주문탭">
@@ -115,6 +115,342 @@
           <div class="form-group instarOrderPage active">
             <h4>Instargram</h4>
 
+            <label for="instarOrder">서비스목록</label>
+            <select name="instarOrder" id="instarOrder">
+              <option>인스타그램 서비스를 선택해주세요</option>
+              <option value="instar1">도달범위↑, 노출빈도↑,프로필방문</option>
+              <option value="instar2">게시글 좋아요</option>
+              <option value="instar3">한국인 팔로워</option>
+              <option value="instar4">한국인 팔로워[남성]</option>
+              <option value="instar5">한국인 팔로워[여성]</option>
+              <option value="instar6">외국인 팔로워</option>
+              <option value="instar7">커스텀 댓글</option>
+              <option value="instar8">이모지 댓글</option>
+              <option value="instar9">랜덤 댓글</option>
+            </select>
+            <label>주문수량</label>
+            <input type="text" placeholder="주문수량" />
+            <label>금액[원]</label>
+            <input type="text" placeholder="금액" />
+            <div class="tg-wrap">
+              <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-c3ow">Num</th>
+                    <th class="tg-c3ow">품질</th>
+                    <th class="tg-c3ow">가격 / 1000개당</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-c3ow">1</td>
+                    <td class="tg-c3ow">저</td>
+                    <td class="tg-c3ow">10,000원</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="formBtn">
+              <a href="/method.html" class="btn btn-border enjoyBtn"
+                >이용방법</a
+              >
+              <a href="/method.html" class="btn btn-border enjoyBtn"
+                >주문하기</a
+              >
+            </div>
+          </div>
+        </form>
+        <form id="youtubeOrderContainer" style="display: none">
+          <div class="form-group youtubeOrderPage">
+            <h4>Instargram</h4>
+            <label for="instarOrder">서비스목록</label>
+            <select name="instarOrder" id="instarOrder">
+              <option>인스타그램 서비스를 선택해주세요</option>
+              <option value="instar1">도달범위↑, 노출빈도↑,프로필방문</option>
+              <option value="instar2">게시글 좋아요</option>
+              <option value="instar3">한국인 팔로워</option>
+              <option value="instar4">한국인 팔로워[남성]</option>
+              <option value="instar5">한국인 팔로워[여성]</option>
+              <option value="instar6">외국인 팔로워</option>
+              <option value="instar7">커스텀 댓글</option>
+              <option value="instar8">이모지 댓글</option>
+              <option value="instar9">랜덤 댓글</option>
+            </select>
+            <label>주문수량</label>
+            <input type="text" placeholder="주문수량" />
+            <label>금액[원]</label>
+            <input type="text" placeholder="금액" />
+            <div class="tg-wrap">
+              <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-c3ow">Num</th>
+                    <th class="tg-c3ow">품질</th>
+                    <th class="tg-c3ow">가격 / 1000개당</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-c3ow">1</td>
+                    <td class="tg-c3ow">저</td>
+                    <td class="tg-c3ow">10,000원</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="formBtn">
+              <a href="/method.html" class="btn btn-border enjoyBtn"
+                >이용방법</a
+              >
+              <a href="/method.html" class="btn btn-border enjoyBtn"
+                >주문하기</a
+              >
+            </div>
+          </div>
+        </form>
+        <form id="tiktokOrderContainer" style="display: none">
+          <div class="form-group tiktokOrderPage">
+            <h4>Instargram</h4>
+            <label for="instarOrder">서비스목록</label>
+            <select name="instarOrder" id="instarOrder">
+              <option>인스타그램 서비스를 선택해주세요</option>
+              <option value="instar1">도달범위↑, 노출빈도↑,프로필방문</option>
+              <option value="instar2">게시글 좋아요</option>
+              <option value="instar3">한국인 팔로워</option>
+              <option value="instar4">한국인 팔로워[남성]</option>
+              <option value="instar5">한국인 팔로워[여성]</option>
+              <option value="instar6">외국인 팔로워</option>
+              <option value="instar7">커스텀 댓글</option>
+              <option value="instar8">이모지 댓글</option>
+              <option value="instar9">랜덤 댓글</option>
+            </select>
+            <label>주문수량</label>
+            <input type="text" placeholder="주문수량" />
+            <label>금액[원]</label>
+            <input type="text" placeholder="금액" />
+            <div class="tg-wrap">
+              <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-c3ow">Num</th>
+                    <th class="tg-c3ow">품질</th>
+                    <th class="tg-c3ow">가격 / 1000개당</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-c3ow">1</td>
+                    <td class="tg-c3ow">저</td>
+                    <td class="tg-c3ow">10,000원</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="formBtn">
+              <a href="/method.html" class="btn btn-border enjoyBtn"
+                >이용방법</a
+              >
+              <a href="/method.html" class="btn btn-border enjoyBtn"
+                >주문하기</a
+              >
+            </div>
+          </div>
+        </form>
+        <form id="facebookOrderContainer" style="display: none">
+          <div class="form-group facebookOrderPage">
+            <h4>Instargram</h4>
+            <label for="instarOrder">서비스목록</label>
+            <select name="instarOrder" id="instarOrder">
+              <option>인스타그램 서비스를 선택해주세요</option>
+              <option value="instar1">도달범위↑, 노출빈도↑,프로필방문</option>
+              <option value="instar2">게시글 좋아요</option>
+              <option value="instar3">한국인 팔로워</option>
+              <option value="instar4">한국인 팔로워[남성]</option>
+              <option value="instar5">한국인 팔로워[여성]</option>
+              <option value="instar6">외국인 팔로워</option>
+              <option value="instar7">커스텀 댓글</option>
+              <option value="instar8">이모지 댓글</option>
+              <option value="instar9">랜덤 댓글</option>
+            </select>
+            <label>주문수량</label>
+            <input type="text" placeholder="주문수량" />
+            <label>금액[원]</label>
+            <input type="text" placeholder="금액" />
+            <div class="tg-wrap">
+              <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-c3ow">Num</th>
+                    <th class="tg-c3ow">품질</th>
+                    <th class="tg-c3ow">가격 / 1000개당</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-c3ow">1</td>
+                    <td class="tg-c3ow">저</td>
+                    <td class="tg-c3ow">10,000원</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="formBtn">
+              <a href="/method.html" class="btn btn-border enjoyBtn"
+                >이용방법</a
+              >
+              <a href="/method.html" class="btn btn-border enjoyBtn"
+                >주문하기</a
+              >
+            </div>
+          </div>
+        </form>
+        <form id="twitterOrderContainer" style="display: none">
+          <div class="form-group twitterOrderPage">
+            <h4>Instargram</h4>
+            <label for="instarOrder">서비스목록</label>
+            <select name="instarOrder" id="instarOrder">
+              <option>인스타그램 서비스를 선택해주세요</option>
+              <option value="instar1">도달범위↑, 노출빈도↑,프로필방문</option>
+              <option value="instar2">게시글 좋아요</option>
+              <option value="instar3">한국인 팔로워</option>
+              <option value="instar4">한국인 팔로워[남성]</option>
+              <option value="instar5">한국인 팔로워[여성]</option>
+              <option value="instar6">외국인 팔로워</option>
+              <option value="instar7">커스텀 댓글</option>
+              <option value="instar8">이모지 댓글</option>
+              <option value="instar9">랜덤 댓글</option>
+            </select>
+            <label>주문수량</label>
+            <input type="text" placeholder="주문수량" />
+            <label>금액[원]</label>
+            <input type="text" placeholder="금액" />
+            <div class="tg-wrap">
+              <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-c3ow">Num</th>
+                    <th class="tg-c3ow">품질</th>
+                    <th class="tg-c3ow">가격 / 1000개당</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-c3ow">1</td>
+                    <td class="tg-c3ow">저</td>
+                    <td class="tg-c3ow">10,000원</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="formBtn">
+              <a href="/method.html" class="btn btn-border enjoyBtn"
+                >이용방법</a
+              >
+              <a href="/method.html" class="btn btn-border enjoyBtn"
+                >주문하기</a
+              >
+            </div>
+          </div>
+        </form>
+        <form id="pinterestOrderContainer" style="display: none">
+          <div class="form-group pinterestOrderPage">
+            <h4>Instargram</h4>
+            <label for="instarOrder">서비스목록</label>
+            <select name="instarOrder" id="instarOrder">
+              <option>인스타그램 서비스를 선택해주세요</option>
+              <option value="instar1">도달범위↑, 노출빈도↑,프로필방문</option>
+              <option value="instar2">게시글 좋아요</option>
+              <option value="instar3">한국인 팔로워</option>
+              <option value="instar4">한국인 팔로워[남성]</option>
+              <option value="instar5">한국인 팔로워[여성]</option>
+              <option value="instar6">외국인 팔로워</option>
+              <option value="instar7">커스텀 댓글</option>
+              <option value="instar8">이모지 댓글</option>
+              <option value="instar9">랜덤 댓글</option>
+            </select>
+            <label>주문수량</label>
+            <input type="text" placeholder="주문수량" />
+            <label>금액[원]</label>
+            <input type="text" placeholder="금액" />
+            <div class="tg-wrap">
+              <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-c3ow">Num</th>
+                    <th class="tg-c3ow">품질</th>
+                    <th class="tg-c3ow">가격 / 1000개당</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-c3ow">1</td>
+                    <td class="tg-c3ow">저</td>
+                    <td class="tg-c3ow">10,000원</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="formBtn">
+              <a href="/method.html" class="btn btn-border enjoyBtn"
+                >이용방법</a
+              >
+              <a href="/method.html" class="btn btn-border enjoyBtn"
+                >주문하기</a
+              >
+            </div>
+          </div>
+        </form>
+        <form id="telegramOrderContainer" style="display: none">
+          <div class="form-group telegramOrderPage">
+            <h4>Instargram</h4>
+            <label for="instarOrder">서비스목록</label>
+            <select name="instarOrder" id="instarOrder">
+              <option>인스타그램 서비스를 선택해주세요</option>
+              <option value="instar1">도달범위↑, 노출빈도↑,프로필방문</option>
+              <option value="instar2">게시글 좋아요</option>
+              <option value="instar3">한국인 팔로워</option>
+              <option value="instar4">한국인 팔로워[남성]</option>
+              <option value="instar5">한국인 팔로워[여성]</option>
+              <option value="instar6">외국인 팔로워</option>
+              <option value="instar7">커스텀 댓글</option>
+              <option value="instar8">이모지 댓글</option>
+              <option value="instar9">랜덤 댓글</option>
+            </select>
+            <label>주문수량</label>
+            <input type="text" placeholder="주문수량" />
+            <label>금액[원]</label>
+            <input type="text" placeholder="금액" />
+            <div class="tg-wrap">
+              <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-c3ow">Num</th>
+                    <th class="tg-c3ow">품질</th>
+                    <th class="tg-c3ow">가격 / 1000개당</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-c3ow">1</td>
+                    <td class="tg-c3ow">저</td>
+                    <td class="tg-c3ow">10,000원</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="formBtn">
+              <a href="/method.html" class="btn btn-border enjoyBtn"
+                >이용방법</a
+              >
+              <a href="/method.html" class="btn btn-border enjoyBtn"
+                >주문하기</a
+              >
+            </div>
+          </div>
+        </form>
+        <form id="webOrderContainer" style="display: none">
+          <div class="form-group webOrderPage">
+            <h4>Instargram</h4>
             <label for="instarOrder">서비스목록</label>
             <select name="instarOrder" id="instarOrder">
               <option>인스타그램 서비스를 선택해주세요</option>

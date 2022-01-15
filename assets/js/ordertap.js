@@ -1,9 +1,22 @@
-if ($(".instarOrderPage").hasClass("active")) {
-  $("#instarOrder").change(function () {
-    let instarOrderVal = $("#instarOrder").val();
+//1. IMG를 누루면 그에 맞는 서비스목록창을 보여준다.
+$(".instarIMG").click(function () {
+  $("#instarOrderContainer").toggle();
+  $("#youtubeOrderContainer").hide();
+  $("#tiktokOrderContainer").hide();
+  $("#facebookOrderContainer").hide();
+  $("#twitterOrderContainer").hide();
+  $("#pinterestOrderContainer").hide();
+  $("#telegramOrderContainer").hide();
+  $("#webOrderContainer").hide();
+});
 
-    if (instarOrderVal == "instar1") {
-      console.log("ggg");
-    }
-  });
-}
+$(".youtubeIMG").click(function () {
+  $("#instarOrderContainer").hide();
+  $("#youtubeOrderContainer").toggle();
+  $("#tiktokOrderContainer").hide();
+  $("#facebookOrderContainer").hide();
+  $("#twitterOrderContainer").hide();
+  $("#pinterestOrderContainer").hide();
+  $("#telegramOrderContainer").hide();
+  $("#webOrderContainer").hide();
+});
