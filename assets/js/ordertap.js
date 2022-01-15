@@ -1,3 +1,15 @@
+//변수모음
+const instarService = {
+  num: ["1", "2", "3"],
+  quality: ["저", "중", "고"],
+  price: ["10,000원", "20,000원"],
+  serviceName: ["Instargram Korean likes + Impressions + Reach"],
+  serviceDescription: [`드롭현상 발생가능( ~ 현재까지 드롭현상 없음)`],
+};
+
+const instarServiceName1 = "Instargram Korean likes + Impressions + Reach";
+const instarServiceDescription1 = `드롭현상 발생가능( ~ 현재까지 드롭현상 없음)`;
+
 //1. IMG를 누루면 그에 맞는 서비스목록창을 보여준다.
 $(".instarIMG").click(function () {
   $("#instarOrderContainer").toggle();
@@ -90,5 +102,7 @@ $(".webIMG").click(function () {
 //2. 인스타서비스에서 서비스목록을 누르면 그에 맞는 가격이 뜬다.
 $("#instarOrder").change(function () {
   $(".상품명").text($("#instarOrder").val());
+  $(".tableServiceName").text(instarService.serviceName[0]);
+  $(".tableServiceDescription").text(instarService.serviceDescription[0]);
   console.log($("#instarOrder").val());
 });
