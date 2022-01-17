@@ -1,4 +1,7 @@
 //변수모음
+let 상품명 = document.querySelector(".상품명");
+const instarOrder = document.querySelectorAll("#instarOrder option");
+//테이블 데이터
 const instarService = {
   num: ["1", "2", "3"],
   quality: ["저", "중", "고"],
@@ -100,9 +103,46 @@ $(".webIMG").click(function () {
 });
 
 //2. 인스타서비스에서 서비스목록을 누르면 그에 맞는 가격이 뜬다.
+
+//  테이블표 보여주기
 $("#instarOrder").change(function () {
-  $(".상품명").text($("#instarOrder").val());
   $(".tableServiceName").text(instarService.serviceName[0]);
   $(".tableServiceDescription").text(instarService.serviceDescription[0]);
-  console.log($("#instarOrder").val());
+  $("#instarOrderInput").val("");
+  $("#instarOrderInput").text("주문수량");
+  $("#instarOrderPriceInput").val("");
+  $("#instarOrderPriceInput").text("금액");
 });
+
+if($("#instarOrder option:selected").val() = 'instar1') {
+  console.log('gg')
+}
+
+// if ((상품명.innerHTML = instarOrder[1].innerHTML)) {
+//   $("#instarOrderInput").on(
+//     "propertychange change keyup paste input",
+//     function () {
+//       $(".상품명").text($("#instarOrder").val());
+//       let instarOrderInputVal = $("#instarOrderInput").val();
+//       $(".수량").text(`${instarOrderInputVal}개`);
+//       const instarOrderPriceInputVal = $("#instarOrderPriceInput").val(
+//         instarOrderInputVal * 10
+//       );
+//       $(".가격").text(`${instarOrderPriceInputVal.val()}원`);
+//     }
+//   );
+// }
+// if ((상품명.innerHTML = instarOrder[2].innerHTML)) {
+//   $("#instarOrderInput").on(
+//     "propertychange change keyup paste input",
+//     function () {
+//       $(".상품명").text($("#instarOrder").val());
+//       let instarOrderInputVal = $("#instarOrderInput").val();
+//       $(".수량").text(`${instarOrderInputVal}개`);
+//       const instarOrderPriceInputVal = $("#instarOrderPriceInput").val(
+//         instarOrderInputVal * 20
+//       );
+//       $(".가격").text(`${instarOrderPriceInputVal.val()}원`);
+//     }
+//   );
+// }

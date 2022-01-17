@@ -101,14 +101,14 @@
             type="text"
             placeholder="인스타 아이디 및 게시물 주소를 입력해주세요"
           />
-          <p>
+          <!-- <p>
             전송멘트 :
             <span
               >인스타그램 / <span class="상품명">상품명</span> /
               <span class="수량">수량</span> / <span class="가격">가격</span> /
               <span class="주소">인스타ID or 게시글</span>
             </span>
-          </p>
+          </p> -->
         </div>
 
         <form id="instarOrderContainer">
@@ -117,22 +117,22 @@
 
             <label for="instarOrder">서비스목록</label>
             <select name="instarOrder" id="instarOrder">
-              <option>인스타그램 서비스를 선택해주세요</option>
-              <option>도달범위↑, 노출빈도↑,프로필방문(중)</option>
-              <option>도달범위↑, 노출빈도↑,프로필방문(상)</option>
-              <option>게시글 좋아요</option>
-              <option>한국인 팔로워</option>
-              <option>한국인 팔로워[남성]</option>
-              <option>한국인 팔로워[여성]</option>
-              <option>외국인 팔로워</option>
-              <option>커스텀 댓글</option>
-              <option>이모지 댓글</option>
-              <option>랜덤 댓글</option>
+              <option >인스타그램 서비스를 선택해주세요</optionid>
+              <option class="instar1">도달범위↑, 노출빈도↑,프로필방문(중)</option>
+              <option class="instar2">도달범위↑, 노출빈도↑,프로필방문(상)</option>
+              <option class="instar3">게시글 좋아요</option>
+              <option class="instar4">한국인 팔로워</option>
+              <option class="instar5">한국인 팔로워[남성]</option>
+              <option class="instar6">한국인 팔로워[여성]</option>
+              <option class="instar7">외국인 팔로워</option>
+              <option class="instar8">커스텀 댓글</option>
+              <option class="instar9">이모지 댓글</option>
+              <option class="instar10">랜덤 댓글</option>
             </select>
             <label>주문수량</label>
-            <input type="text" placeholder="주문수량" />
+            <input id="instarOrderInput" type="text" placeholder="주문수량" />
             <label>금액[원]</label>
-            <input type="text" placeholder="금액" />
+            <input id="instarOrderPriceInput" type="text" placeholder="금액" />
             <div class="tg-wrap">
               <table class="tg" style="table-layout: fixed">
                 <colgroup>
