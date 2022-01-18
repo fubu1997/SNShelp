@@ -193,27 +193,37 @@
             </div>
           </div>
         </form>
-        <form id="youtubeOrderContainer" style="display: none">
-          <div class="form-group youtubeOrderPage">
+        <form id="youtubeOrderContainer" style="display: none;">
+          <div class="form-group instarOrderPage active">
             <h4>Youtube</h4>
             <label for="youtubeOrder">서비스목록</label>
-            <select name="youtubeOrder" id="youtubeOrder">
-              <option>Youtube 서비스를 선택해주세요</option>
-              <option value="youtube1">조회수 늘리기</option>
-              <option value="youtube2">좋아요 늘리기</option>
-              <option value="youtube3">채널 구독자</option>
-              <option value="youtube4">한국인 댓글</option>
-              <option value="youtube5">댓글 좋아요</option>
-              <option value="youtube6">이모지 댓글</option>
-              <option value="youtube7">랜덤 댓글</option>
-              <option value="youtube8">소셜미디어에 공유</option>
-              <option value="youtube9">라이브 스트리밍 시청자</option>
+            <select 
+              name="youtubeOrder"
+              id="youtubeOrder"
+              onchange="youtubeOrderFunc(this)">
+              <option value="youtube0">인스타그램 서비스를 선택해주세요</option>
+              <option value="youtube1">한국인 팔로워(실계정)</option>
+              <option value="youtube2">한국인 남자 팔로워(실계정)</option>
+              <option value="youtube3">한국인 여자 팔로워(실계정)</option>
+              <option value="youtube4">
+                좋아요 + 노출빈도 + 도달범위 + 프로필방문(여성)
+              </option>
+              <option value="youtube5">
+                좋아요 + 노출빈도 + 도달범위 + 프로필방문(남성)
+              </option>
+              <option value="youtube6">
+                좋아요 + 노출빈도 + 도달범위 + 프로필방문(실제유저)
+              </option>
+              <option value="youtube7">외국인 팔로워</option>
+              <option value="youtube8">커스텀 댓글(HQ)</option>
+              <option value="youtube9">커스텀 댓글(UHQ)</option>
+              <option value="youtube10">이모지 댓글</option>
+              <option value="youtube11">랜덤 댓글</option>
             </select>
             <label>주문수량</label>
-            <input type="text" placeholder="주문수량" />
+            <input id="youtubeOrderInput" type="text" placeholder="주문수량" />
             <label>금액[원]</label>
-            <input type="text" placeholder="금액" />
-
+            <input id="youtubeOrderPriceInput" type="text" placeholder="금액" />
             <div class="tg-wrap">
               <table class="tg" style="table-layout: fixed">
                 <colgroup>
@@ -232,30 +242,32 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="tg-p3h7">1</td>
-                    <td class="tg-p3h7">중</td>
-                    <td class="tg-p3h7">10,000</td>
+                    <td class="tg-p3h7" id="youtubeTableServiceNum">1</td>
+                    <td class="tg-p3h7" id="youtubeTableServiceQuality">중</td>
+                    <td class="tg-p3h7" id="youtubeTableServicePrice">10,000원</td>
                     <td class="tg-p3h7"></td>
                   </tr>
                   <tr>
-                    <td class="tg-p3h7" colspan="4">
-                      Instargram Korean likes + Impressions + Reach
+                    <td class="tg-p3h7 youtubeTableServiceName" colspan="4">
+                      Service 이름
                     </td>
                   </tr>
                   <tr>
-                    <td class="tg-p3h7" colspan="4">
-                      드롭현상 발생 가능( ~ 현재까지 Drop없음)
+                    <td class="tg-p3h7 youtubeTableServiceDescription" colspan="4">
+                      HQ : 드롭현상 가능성 있음</br>
+                      UHQ : 최고품질 드롭현상 가능성 없음</br>
+                      드롭현상 : 갑자기 팔로우, 및 좋아요가 떨어지는 현상</br>
+                      오토리필 : 리필기간 중에 설정된 수량만큼 자동으로 채워짐
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
-
             <div class="formBtn">
               <a href="/method.html" class="btn btn-border enjoyBtn"
                 >이용방법</a
               >
-              <a href="/method.html" class="btn btn-border enjoyBtn" id="orderBtn"
+              <a class="btn btn-border enjoyBtn" id="orderBtn"
                 >주문하기</a
               >
             </div>

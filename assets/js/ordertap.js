@@ -12,6 +12,23 @@ const tableServiceName = document.querySelector(".tableServiceName");
 const tableServiceDescription = document.querySelector(
   ".tableServiceDescription"
 );
+
+//유투브 테이블
+const youtubeTableServiceNum = document.querySelector(
+  ".youtubeTableServiceNum"
+);
+const youtubeTableServiceQuality = document.querySelector(
+  ".youtubeTableServiceQuality"
+);
+const youtubeTableServicePrice = document.querySelector(
+  ".youtubeTableServicePrice"
+);
+const youtubeTableServiceName = document.querySelector(
+  ".youtubeTableServiceName"
+);
+const youtubeTableServiceDescription = document.querySelector(
+  ".youtubeTableServiceDescription"
+);
 //주문하기 버튼
 const orderBtn = document.querySelector("#orderBtn");
 const 상품명 = document.querySelector(".상품명");
@@ -389,6 +406,23 @@ function instarOrderFunc(str) {
     타겟 : ${instarID.value}`;
     copy();
   });
+}
+
+function youtubeOrderFunc(str) {
+  //한국인팔로워(실계정)
+  if (str.value == "youtube1") {
+    $("#youtubeOrderContainer").on(
+      "propertychange change keyup paste input",
+      function () {
+        $("#youtubeOrderInput").text("");
+        $("#youtubeOrderPriceInput").val(
+          `${($("#youtubeOrderInput").val() * 120)
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`
+        );
+      }
+    );
+  }
 }
 
 function copy() {
