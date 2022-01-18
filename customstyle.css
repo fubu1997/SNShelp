@@ -155,11 +155,6 @@ select,
   margin: 10px auto;
   color: black;
   padding: 5px;
-  overflow-y: scroll;
-}
-select option {
-  overflow-y: scroll;
-  height: 200px;
 }
 /* form */
 
@@ -186,10 +181,10 @@ footer p {
   margin: auto;
   border: 1px solid rgb(230, 214, 214, 0.8);
   border-radius: 20px;
-  background-color: rgb(31, 28, 28, 0.8);
+  background-color: rgba(43, 39, 41, 0.8);
   color: white;
   text-align: center;
   position: fixed;
-  top: 20%;
+  bottom: 20%;
   left: 40%;
 }

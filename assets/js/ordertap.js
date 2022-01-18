@@ -380,6 +380,7 @@ function instarOrderFunc(str) {
   orderBtn.addEventListener("click", function () {
     tableServiceName.innerText = `아래 멘트를 KakaoTalk 또는 DM 으로 전송해주세요
       결제 : 카카오톡 송금 or 무통장입금
+      카카오톡 : snsmarketer2022 / 인스타 : snsmarketer2022
       농협 : 351-1212-4301-33 이경해`;
     tableServiceDescription.innerText = ` 종목 : 인스타그램
     상품명 :${str.options[str.selectedIndex].text}
@@ -397,5 +398,5 @@ function copy() {
   textarea.select(); // textarea 요소 선택
   document.execCommand("copy"); // copy 실행
   document.body.removeChild(textarea); // textarea 요소 삭제
-  $(".confirmation").hide().html("복사완료").fadeIn(0).delay(800).fadeOut(0);
+  $(".confirmation").hide().html(`복사완료`).fadeIn(0).delay(800).fadeOut(0);
 }
