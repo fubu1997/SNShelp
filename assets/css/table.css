@@ -44,6 +44,12 @@
   text-align: center;
   vertical-align: top;
 }
+.tableServiceName {
+  text-align: left;
+}
+.tableServiceDescription {
+  text-align: left;
+}
 @media screen and (max-width: 767px) {
   .tg {
     width: auto !important;
