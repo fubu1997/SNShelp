@@ -201,24 +201,18 @@
               name="youtubeOrder"
               id="youtubeOrder"
               onchange="youtubeOrderFunc(this)">
-              <option value="youtube0">인스타그램 서비스를 선택해주세요</option>
-              <option value="youtube1">한국인 팔로워(실계정)</option>
-              <option value="youtube2">한국인 남자 팔로워(실계정)</option>
-              <option value="youtube3">한국인 여자 팔로워(실계정)</option>
-              <option value="youtube4">
-                좋아요 + 노출빈도 + 도달범위 + 프로필방문(여성)
-              </option>
-              <option value="youtube5">
-                좋아요 + 노출빈도 + 도달범위 + 프로필방문(남성)
-              </option>
-              <option value="youtube6">
-                좋아요 + 노출빈도 + 도달범위 + 프로필방문(실제유저)
-              </option>
-              <option value="youtube7">외국인 팔로워</option>
-              <option value="youtube8">커스텀 댓글(HQ)</option>
-              <option value="youtube9">커스텀 댓글(UHQ)</option>
-              <option value="youtube10">이모지 댓글</option>
-              <option value="youtube11">랜덤 댓글</option>
+              <option value="youtube0">유튜브 서비스를 선택해주세요</option>
+              <option value="youtube1">구독자 늘리기(HQ)</option>
+              <option value="youtube2">구독자 늘리기(UHQ)</option>
+              <option value="youtube3">유튜브 조회수(HQ)</option>
+              <option value="youtube4">유튜브 조회수(UHQ)</option>
+              <option value="youtube5">유튜브 라이브 조회수(HQ)</option>
+              <option value="youtube6">유튜브 라이브 조회수(UHQ)</option>
+              <option value="youtube7">유튜브 좋아요(HQ)</option>
+              <option value="youtube8">유튜브 좋아요(UHQ)</option>
+              <option value="youtube9">유튜브 Shorts 조회수</option>
+              <option value="youtube10">유튜브 커스텀 댓글</option>
+              <option value="youtube11">유튜브 랜덤 댓글</option>
             </select>
             <label>주문수량</label>
             <input id="youtubeOrderInput" type="text" placeholder="주문수량" />
@@ -242,18 +236,18 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="tg-p3h7" id="youtubeTableServiceNum">1</td>
-                    <td class="tg-p3h7" id="youtubeTableServiceQuality">중</td>
-                    <td class="tg-p3h7" id="youtubeTableServicePrice">10,000원</td>
+                    <td class="tg-p3h7" id="youtubeTableServiceNum">Num</td>
+                    <td class="tg-p3h7" id="youtubeTableServiceQuality">Quality</td>
+                    <td class="tg-p3h7" id="youtubeTableServicePrice">Price</td>
                     <td class="tg-p3h7"></td>
                   </tr>
                   <tr>
-                    <td class="tg-p3h7 youtubeTableServiceName" colspan="4">
+                    <td class="tg-p3h7" id="youtubeTableServiceName" colspan="4">
                       Service 이름
                     </td>
                   </tr>
                   <tr>
-                    <td class="tg-p3h7 youtubeTableServiceDescription" colspan="4">
+                    <td class="tg-p3h7" id="youtubeTableServiceDescription" colspan="4">
                       HQ : 드롭현상 가능성 있음</br>
                       UHQ : 최고품질 드롭현상 가능성 없음</br>
                       드롭현상 : 갑자기 팔로우, 및 좋아요가 떨어지는 현상</br>
@@ -267,43 +261,69 @@
               <a href="/method.html" class="btn btn-border enjoyBtn"
                 >이용방법</a
               >
-              <a class="btn btn-border enjoyBtn" id="orderBtn"
+              <a class="btn btn-border enjoyBtn" id="youtubeOrderBtn"
                 >주문하기</a
               >
             </div>
           </div>
         </form>
-        <form id="tiktokOrderContainer" style="display: none">
-          <div class="form-group tiktokOrderPage">
+        <form id="tiktokOrderContainer" style="display: none;">
+          <div class="form-group instarOrderPage active">
             <h4>Tiktok</h4>
             <label for="tiktokOrder">서비스목록</label>
-            <select name="tiktokOrder" id="tiktokOrder">
-              <option>Tiktok 서비스를 선택해주세요</option>
-              <option value="tiktok1">동영상 조회수</option>
-              <option value="tiktok2">한국인 팔로워</option>
-              <option value="tiktok3">외국인 팔로워</option>
-              <option value="tiktok4">한국인 좋아요</option>
-              <option value="tiktok5">동영상 좋아요</option>
-              <option value="tiktok6">동영상 공유</option>
+            <select 
+              name="tiktokOrder"
+              id="tiktokOrder"
+              onchange="tiktokOrderFunc(this)">
+              <option value="tiktok0">Tiktok 서비스를 선택해주세요</option>
+              <option value="tiktok1">팔로워(HQ)</option>
+              <option value="tiktok2">팔로워(UHQ)</option>
+              <option value="tiktok3">좋아요(HQ)</option>
+              <option value="tiktok4">좋아요(UHQ)</option>
+              <option value="tiktok5">조회수(HQ)</option>
+              <option value="tiktok6">조회수(UHQ)</option>
+              <option value="tiktok7">커스텀 댓글</option>
+              <option value="tiktok8">랜덤 댓글</option>
             </select>
             <label>주문수량</label>
-            <input type="text" placeholder="주문수량" />
+            <input id="tiktokOrderInput" type="text" placeholder="주문수량" />
             <label>금액[원]</label>
-            <input type="text" placeholder="금액" />
+            <input id="tiktokOrderPriceInput" type="text" placeholder="금액" />
             <div class="tg-wrap">
-              <table class="tg">
+              <table class="tg" style="table-layout: fixed">
+                <colgroup>
+                  <col style="width: 65px" />
+                  <col style="width: 106px" />
+                  <col style="width: 132px" />
+                  <col style="width: 104px" />
+                </colgroup>
                 <thead>
                   <tr>
-                    <th class="tg-c3ow">Num</th>
-                    <th class="tg-c3ow">품질</th>
-                    <th class="tg-c3ow">가격 / 1000개당</th>
+                    <th class="tg-5djc">Num</th>
+                    <th class="tg-p3h7">품질</th>
+                    <th class="tg-p3h7">가격/1000개당</th>
+                    <th class="tg-p3h7">비고</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="tg-c3ow">1</td>
-                    <td class="tg-c3ow">저</td>
-                    <td class="tg-c3ow">10,000원</td>
+                    <td class="tg-p3h7" id="tiktokTableServiceNum">Num</td>
+                    <td class="tg-p3h7" id="tiktokTableServiceQuality">Quality</td>
+                    <td class="tg-p3h7" id="tiktokTableServicePrice">Price</td>
+                    <td class="tg-p3h7"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-p3h7" id="tiktokTableServiceName" colspan="4">
+                      Service 이름
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-p3h7" id="tiktokTableServiceDescription" colspan="4">
+                      HQ : 드롭현상 가능성 있음</br>
+                      UHQ : 최고품질 드롭현상 가능성 없음</br>
+                      드롭현상 : 갑자기 팔로우, 및 좋아요가 떨어지는 현상</br>
+                      오토리필 : 리필기간 중에 설정된 수량만큼 자동으로 채워짐
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -312,43 +332,67 @@
               <a href="/method.html" class="btn btn-border enjoyBtn"
                 >이용방법</a
               >
-              <a href="/method.html" class="btn btn-border enjoyBtn"
+              <a class="btn btn-border enjoyBtn" id="tiktokOrderBtn"
                 >주문하기</a
               >
             </div>
           </div>
         </form>
-        <form id="facebookOrderContainer" style="display: none">
-          <div class="form-group facebookOrderPage">
+        <form id="facebookOrderContainer" style="display: none;">
+          <div class="form-group instarOrderPage active">
             <h4>Facebook</h4>
             <label for="facebookOrder">서비스목록</label>
-            <select name="facebookOrder" id="facebookOrder">
-              <option>Facebook 서비스를 선택해주세요</option>
-              <option value="facebook1">페이지 좋아요</option>
-              <option value="facebook2">게시물 좋아요</option>
-              <option value="facebook3">동영상 조회수</option>
-              <option value="facebook4">게시물 공유</option>
-              <option value="facebook5">개인계정 팔로워</option>
-              <option value="facebook6">댓글 좋아요</option>
+            <select 
+              name="facebookOrder"
+              id="facebookOrder"
+              onchange="facebookOrderFunc(this)">
+              <option value="facebook0">Facebook 서비스를 선택해주세요</option>
+              <option value="facebook1">페이지 좋아요(HQ)</option>
+              <option value="facebook2">페이지 좋아요(UHQ)</option>
+              <option value="facebook3">포스트 좋아요(HQ)</option>
+              <option value="facebook4">포스트 좋아요(HQ)</option>
+              <option value="facebook5">팬페이지 좋아요</option>
+              <option value="facebook6">비디오 조회수</option>
             </select>
             <label>주문수량</label>
-            <input type="text" placeholder="주문수량" />
+            <input id="facebookOrderInput" type="text" placeholder="주문수량" />
             <label>금액[원]</label>
-            <input type="text" placeholder="금액" />
+            <input id="facebookOrderPriceInput" type="text" placeholder="금액" />
             <div class="tg-wrap">
-              <table class="tg">
+              <table class="tg" style="table-layout: fixed">
+                <colgroup>
+                  <col style="width: 65px" />
+                  <col style="width: 106px" />
+                  <col style="width: 132px" />
+                  <col style="width: 104px" />
+                </colgroup>
                 <thead>
                   <tr>
-                    <th class="tg-c3ow">Num</th>
-                    <th class="tg-c3ow">품질</th>
-                    <th class="tg-c3ow">가격 / 1000개당</th>
+                    <th class="tg-5djc">Num</th>
+                    <th class="tg-p3h7">품질</th>
+                    <th class="tg-p3h7">가격/1000개당</th>
+                    <th class="tg-p3h7">비고</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="tg-c3ow">1</td>
-                    <td class="tg-c3ow">저</td>
-                    <td class="tg-c3ow">10,000원</td>
+                    <td class="tg-p3h7" id="facebookTableServiceNum">Num</td>
+                    <td class="tg-p3h7" id="facebookTableServiceQuality">Quality</td>
+                    <td class="tg-p3h7" id="facebookTableServicePrice">Price</td>
+                    <td class="tg-p3h7"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-p3h7" id="facebookTableServiceName" colspan="4">
+                      Service 이름
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-p3h7" id="facebookTableServiceDescription" colspan="4">
+                      HQ : 드롭현상 가능성 있음</br>
+                      UHQ : 최고품질 드롭현상 가능성 없음</br>
+                      드롭현상 : 갑자기 팔로우, 및 좋아요가 떨어지는 현상</br>
+                      오토리필 : 리필기간 중에 설정된 수량만큼 자동으로 채워짐
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -357,40 +401,66 @@
               <a href="/method.html" class="btn btn-border enjoyBtn"
                 >이용방법</a
               >
-              <a href="/method.html" class="btn btn-border enjoyBtn"
+              <a class="btn btn-border enjoyBtn" id="facebookOrderBtn"
                 >주문하기</a
               >
             </div>
           </div>
         </form>
-        <form id="twitterOrderContainer" style="display: none">
-          <div class="form-group twitterOrderPage">
+        <form id="twitterOrderContainer" style="display: none;">
+          <div class="form-group instarOrderPage active">
             <h4>Twitter</h4>
             <label for="twitterOrder">서비스목록</label>
-            <select name="twitterOrder" id="twitterOrder">
-              <option>Twitter 서비스를 선택해주세요</option>
-              <option value="twitter1">계정 팔로워</option>
-              <option value="twitter2">게시물 좋아요</option>
-              <option value="twitter3">게시물 리트윗</option>
+            <select 
+              name="twitterOrder"
+              id="twitterOrder"
+              onchange="twitterOrderFunc(this)">
+              <option value="twitter0">Twitter 서비스를 선택해주세요</option>
+              <option value="twitter1">팔로워(HQ)</option>
+              <option value="twitter2">팔로워(UHQ)</option>
+              <option value="twitter3">리트윗(HQ)</option>
+              <option value="twitter4">리트윗(HQ)</option>
+              <option value="twitter5">포스트 좋아요</option>
             </select>
             <label>주문수량</label>
-            <input type="text" placeholder="주문수량" />
+            <input id="twitterOrderInput" type="text" placeholder="주문수량" />
             <label>금액[원]</label>
-            <input type="text" placeholder="금액" />
+            <input id="twitterOrderPriceInput" type="text" placeholder="금액" />
             <div class="tg-wrap">
-              <table class="tg">
+              <table class="tg" style="table-layout: fixed">
+                <colgroup>
+                  <col style="width: 65px" />
+                  <col style="width: 106px" />
+                  <col style="width: 132px" />
+                  <col style="width: 104px" />
+                </colgroup>
                 <thead>
                   <tr>
-                    <th class="tg-c3ow">Num</th>
-                    <th class="tg-c3ow">품질</th>
-                    <th class="tg-c3ow">가격 / 1000개당</th>
+                    <th class="tg-5djc">Num</th>
+                    <th class="tg-p3h7">품질</th>
+                    <th class="tg-p3h7">가격/1000개당</th>
+                    <th class="tg-p3h7">비고</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="tg-c3ow">1</td>
-                    <td class="tg-c3ow">저</td>
-                    <td class="tg-c3ow">10,000원</td>
+                    <td class="tg-p3h7" id="twitterTableServiceNum">Num</td>
+                    <td class="tg-p3h7" id="twitterTableServiceQuality">Quality</td>
+                    <td class="tg-p3h7" id="twitterTableServicePrice">Price</td>
+                    <td class="tg-p3h7"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-p3h7" id="twitterTableServiceName" colspan="4">
+                      Service 이름
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-p3h7" id="twitterTableServiceDescription" colspan="4">
+                      HQ : 드롭현상 가능성 있음</br>
+                      UHQ : 최고품질 드롭현상 가능성 없음</br>
+                      드롭현상 : 갑자기 팔로우, 및 좋아요가 떨어지는 현상</br>
+                      오토리필 : 리필기간 중에 설정된 수량만큼 자동으로 채워짐
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -399,42 +469,62 @@
               <a href="/method.html" class="btn btn-border enjoyBtn"
                 >이용방법</a
               >
-              <a href="/method.html" class="btn btn-border enjoyBtn"
+              <a class="btn btn-border enjoyBtn" id="twitterOrderBtn"
                 >주문하기</a
               >
             </div>
           </div>
         </form>
-        <form id="pinterestOrderContainer" style="display: none">
-          <div class="form-group pinterestOrderPage">
+        <form id="pinterestOrderContainer" style="display: none;">
+          <div class="form-group instarOrderPage active">
             <h4>Pinterest</h4>
             <label for="pinterestOrder">서비스목록</label>
-            <select name="pinterestOrder" id="pinterestOrder">
-              <option>Pinterest 서비스를 선택해주세요</option>
-              <option value="pinterest1">
-                도달범위↑, 노출빈도↑,프로필방문
-              </option>
-              <option value="pinterest2">게시물 팔로워</option>
-              <option value="pinterest3">게시물 저장</option>
+            <select 
+              name="pinterestOrder"
+              id="pinterestOrder"
+              onchange="pinterestOrderFunc(this)">
+              <option value="pinterest0">Pinterest 서비스를 선택해주세요</option>
+              <option value="pinterest1">좋아요 작업</option>
             </select>
             <label>주문수량</label>
-            <input type="text" placeholder="주문수량" />
+            <input id="pinterestOrderInput" type="text" placeholder="주문수량" />
             <label>금액[원]</label>
-            <input type="text" placeholder="금액" />
+            <input id="pinterestOrderPriceInput" type="text" placeholder="금액" />
             <div class="tg-wrap">
-              <table class="tg">
+              <table class="tg" style="table-layout: fixed">
+                <colgroup>
+                  <col style="width: 65px" />
+                  <col style="width: 106px" />
+                  <col style="width: 132px" />
+                  <col style="width: 104px" />
+                </colgroup>
                 <thead>
                   <tr>
-                    <th class="tg-c3ow">Num</th>
-                    <th class="tg-c3ow">품질</th>
-                    <th class="tg-c3ow">가격 / 1000개당</th>
+                    <th class="tg-5djc">Num</th>
+                    <th class="tg-p3h7">품질</th>
+                    <th class="tg-p3h7">가격/1000개당</th>
+                    <th class="tg-p3h7">비고</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="tg-c3ow">1</td>
-                    <td class="tg-c3ow">저</td>
-                    <td class="tg-c3ow">10,000원</td>
+                    <td class="tg-p3h7" id="pinterestTableServiceNum">Num</td>
+                    <td class="tg-p3h7" id="pinterestTableServiceQuality">Quality</td>
+                    <td class="tg-p3h7" id="pinterestTableServicePrice">Price</td>
+                    <td class="tg-p3h7"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-p3h7" id="pinterestTableServiceName" colspan="4">
+                      Service 이름
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-p3h7" id="pinterestTableServiceDescription" colspan="4">
+                      HQ : 드롭현상 가능성 있음</br>
+                      UHQ : 최고품질 드롭현상 가능성 없음</br>
+                      드롭현상 : 갑자기 팔로우, 및 좋아요가 떨어지는 현상</br>
+                      오토리필 : 리필기간 중에 설정된 수량만큼 자동으로 채워짐
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -443,39 +533,63 @@
               <a href="/method.html" class="btn btn-border enjoyBtn"
                 >이용방법</a
               >
-              <a href="/method.html" class="btn btn-border enjoyBtn"
+              <a class="btn btn-border enjoyBtn" id="pinterestOrderBtn"
                 >주문하기</a
               >
             </div>
           </div>
         </form>
-        <form id="telegramOrderContainer" style="display: none">
-          <div class="form-group telegramOrderPage">
+        <form id="telegramOrderContainer" style="display: none;">
+          <div class="form-group instarOrderPage active">
             <h4>Telegram</h4>
             <label for="telegramOrder">서비스목록</label>
-            <select name="telegramOrder" id="telegramOrder">
-              <option>Telegram 서비스를 선택해주세요</option>
-              <option value="telegram1">텔레그램 멤버수</option>
-              <option value="telegram2">텔레그램 좋아요</option>
+            <select 
+              name="telegramOrder"
+              id="telegramOrder"
+              onchange="telegramOrderFunc(this)">
+              <option value="telegram0">telegram 서비스를 선택해주세요</option>
+              <option value="telegram1">채널 멤버</option>
+              <option value="telegram2">포스트 조회수</option>
             </select>
             <label>주문수량</label>
-            <input type="text" placeholder="주문수량" />
+            <input id="telegramOrderInput" type="text" placeholder="주문수량" />
             <label>금액[원]</label>
-            <input type="text" placeholder="금액" />
+            <input id="telegramOrderPriceInput" type="text" placeholder="금액" />
             <div class="tg-wrap">
-              <table class="tg">
+              <table class="tg" style="table-layout: fixed">
+                <colgroup>
+                  <col style="width: 65px" />
+                  <col style="width: 106px" />
+                  <col style="width: 132px" />
+                  <col style="width: 104px" />
+                </colgroup>
                 <thead>
                   <tr>
-                    <th class="tg-c3ow">Num</th>
-                    <th class="tg-c3ow">품질</th>
-                    <th class="tg-c3ow">가격 / 1000개당</th>
+                    <th class="tg-5djc">Num</th>
+                    <th class="tg-p3h7">품질</th>
+                    <th class="tg-p3h7">가격/1000개당</th>
+                    <th class="tg-p3h7">비고</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="tg-c3ow">1</td>
-                    <td class="tg-c3ow">저</td>
-                    <td class="tg-c3ow">10,000원</td>
+                    <td class="tg-p3h7" id="telegramTableServiceNum">Num</td>
+                    <td class="tg-p3h7" id="telegramTableServiceQuality">Quality</td>
+                    <td class="tg-p3h7" id="telegramTableServicePrice">Price</td>
+                    <td class="tg-p3h7"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-p3h7" id="telegramTableServiceName" colspan="4">
+                      Service 이름
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-p3h7" id="telegramTableServiceDescription" colspan="4">
+                      HQ : 드롭현상 가능성 있음</br>
+                      UHQ : 최고품질 드롭현상 가능성 없음</br>
+                      드롭현상 : 갑자기 팔로우, 및 좋아요가 떨어지는 현상</br>
+                      오토리필 : 리필기간 중에 설정된 수량만큼 자동으로 채워짐
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -484,40 +598,63 @@
               <a href="/method.html" class="btn btn-border enjoyBtn"
                 >이용방법</a
               >
-              <a href="/method.html" class="btn btn-border enjoyBtn"
+              <a class="btn btn-border enjoyBtn" id="telegramOrderBtn"
                 >주문하기</a
               >
             </div>
           </div>
         </form>
-        <form id="webOrderContainer" style="display: none">
-          <div class="form-group webOrderPage">
+        <form id="webOrderContainer" style="display: none;">
+          <div class="form-group instarOrderPage active">
             <h4>Web</h4>
             <label for="webOrder">서비스목록</label>
-            <select name="webOrder" id="webOrder">
-              <option>Web 서비스를 선택해주세요</option>
-              <option value="web1">웹사이트 트래픽(나라별)</option>
-              <option value="web2">웹사이트 SEO 작업</option>
-              <option value="web3">웹사이트 방문</option>
+            <select 
+              name="webOrder"
+              id="webOrder"
+              onchange="webOrderFunc(this)">
+              <option value="web0">Web 서비스를 선택해주세요</option>
+              <option value="web1">웹사이트 한국 트래픽(사이트별)</option>
+              <option value="web2">(선택X) 트래픽 나라별 사이트별 선택가능</option>
             </select>
             <label>주문수량</label>
-            <input type="text" placeholder="주문수량" />
+            <input id="webOrderInput" type="text" placeholder="주문수량" />
             <label>금액[원]</label>
-            <input type="text" placeholder="금액" />
+            <input id="webOrderPriceInput" type="text" placeholder="금액" />
             <div class="tg-wrap">
-              <table class="tg">
+              <table class="tg" style="table-layout: fixed">
+                <colgroup>
+                  <col style="width: 65px" />
+                  <col style="width: 106px" />
+                  <col style="width: 132px" />
+                  <col style="width: 104px" />
+                </colgroup>
                 <thead>
                   <tr>
-                    <th class="tg-c3ow">Num</th>
-                    <th class="tg-c3ow">품질</th>
-                    <th class="tg-c3ow">가격 / 1000개당</th>
+                    <th class="tg-5djc">Num</th>
+                    <th class="tg-p3h7">품질</th>
+                    <th class="tg-p3h7">가격/1000개당</th>
+                    <th class="tg-p3h7">비고</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="tg-c3ow">1</td>
-                    <td class="tg-c3ow">저</td>
-                    <td class="tg-c3ow">10,000원</td>
+                    <td class="tg-p3h7" id="webTableServiceNum">Num</td>
+                    <td class="tg-p3h7" id="webTableServiceQuality">Quality</td>
+                    <td class="tg-p3h7" id="webTableServicePrice">Price</td>
+                    <td class="tg-p3h7"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-p3h7" id="webTableServiceName" colspan="4">
+                      Service 이름
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-p3h7" id="webTableServiceDescription" colspan="4">
+                      HQ : 드롭현상 가능성 있음</br>
+                      UHQ : 최고품질 드롭현상 가능성 없음</br>
+                      드롭현상 : 갑자기 팔로우, 및 좋아요가 떨어지는 현상</br>
+                      오토리필 : 리필기간 중에 설정된 수량만큼 자동으로 채워짐
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -526,7 +663,7 @@
               <a href="/method.html" class="btn btn-border enjoyBtn"
                 >이용방법</a
               >
-              <a href="/method.html" class="btn btn-border enjoyBtn"
+              <a class="btn btn-border enjoyBtn" id="webOrderBtn"
                 >주문하기</a
               >
             </div>

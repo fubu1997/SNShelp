@@ -52,7 +52,13 @@
 }
 @media screen and (max-width: 767px) {
   .tg {
-    width: auto !important;
+    width: 80%;
+  }
+  .tg th {
+    font-size: 12px;
+  }
+  .tg td {
+    font-size: 12px;
   }
   .tg col {
     width: auto !important;
