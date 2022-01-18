@@ -1402,8 +1402,14 @@ function webOrderFunc(str) {
   });
 }
 
+const instarURL = `https://www.instagram.com/`;
+
 function moveTarget() {
-  window.open(`${instarID.value}`);
+  if (instarID.value.indexOf(instarURL) != -1) {
+    window.open(`${instarID.value}`);
+  } else {
+    window.open(`https://www.instagram.com/${instarID.value}`);
+  }
 }
 
 function copy(a) {
