@@ -27,3 +27,12 @@ methodInstarBtn.addEventListener("click", function () {
   document.body.removeChild(textArea);
   alert("복사되었습니다.");
 });
+
+$("#서비스소개Btn").click(function () {
+  $(".이용방법페이지").toggle();
+  $(".아이디확인방법").hide();
+});
+$("#아이디확인방법Btn").click(function () {
+  $(".이용방법페이지").hide();
+  $(".아이디확인방법").toggle();
+});
