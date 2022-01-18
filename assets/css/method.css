@@ -1,0 +1,19 @@
+.이용방법pageBtn {
+  max-width: 890px;
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+  border: 5px solid white;
+  border-radius: 10px;
+  background-color: rgba(18, 21, 24, 0.5);
+  padding: 10px;
+}
+.이용방법pageBtn button {
+  background-color: wheat;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  color: black;
+  font-weight: bolder;
+}

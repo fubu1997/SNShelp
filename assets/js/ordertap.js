@@ -1402,6 +1402,10 @@ function webOrderFunc(str) {
   });
 }
 
+function moveTarget() {
+  window.open(`${instarID.value}`);
+}
+
 function copy(a) {
   const textarea = document.createElement("textarea"); // teatarea 요소 생성
   document.body.appendChild(textarea); // body에 요소 추가
