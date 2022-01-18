@@ -6,17 +6,10 @@
   text-align: center;
 }
 .mainImg img {
+  cursor: pointer;
   width: 100px;
   height: 100px;
   margin: 10px;
-}
-
-@media only screen and (max-width: 767px) {
-  .mainImg img {
-    width: 50px;
-    height: 50px;
-    margin: 5px;
-  }
 }
 
 .service_icon {
@@ -120,6 +113,7 @@
   text-align: center;
   margin: 10px auto;
   padding: 10px;
+  background-color: rgba(18, 21, 24, 0.5);
 }
 .주문탭 input {
   width: 60%;
@@ -187,4 +181,15 @@ footer p {
   position: fixed;
   bottom: 20%;
   left: 40%;
+}
+
+@media only screen and (max-width: 767px) {
+  * {
+    font-size: 10px !important;
+  }
+  .mainImg img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+  }
 }
