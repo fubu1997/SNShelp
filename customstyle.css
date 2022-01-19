@@ -108,7 +108,8 @@
 }
 
 /* 주문탭 */
-.주문탭 {
+.주문탭,
+.home주문방식 {
   max-width: 890px;
   width: 80%;
   border: 1px solid white;
@@ -116,7 +117,17 @@
   text-align: center;
   margin: 10px auto;
   padding: 10px;
-  background-color: rgba(18, 21, 24, 0.5);
+  background-color: rgba(18, 21, 24, 0.7);
+}
+.home주문방식 button {
+  background-color: rgb(68, 58, 153);
+  border: none;
+  border-radius: 30px;
+  padding: 5px;
+  margin-left: 5px;
+}
+.home주문방식 button:hover {
+  background-color: black;
 }
 .주문탭 input {
   width: 60%;
@@ -204,6 +215,16 @@ footer p {
   }
   .주문탭 {
     font-size: 12px;
+  }
+  .home주문방식 h4 {
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  .home주문방식 h5 {
+    font-size: 13px;
+  }
+  .home주문방식 {
+    font-size: 10px;
   }
 
   .mainImg img {

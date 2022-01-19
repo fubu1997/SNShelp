@@ -4,6 +4,11 @@ const instarOrderInput = document.querySelector("#instarOrderInput");
 const instarOrderPriceInput = document.querySelector("#instarOrderPriceInput");
 const instarID = document.querySelector(".instarID");
 
+//입금방법
+const kakaoId = document.querySelector("#kakaoId");
+const instarId = document.querySelector("#instarId");
+const 입금계좌 = document.querySelector("#입금계좌");
+
 //인스타테이블 관련
 const tableServiceNum = document.querySelector("#tableServiceNum");
 const tableServiceQuality = document.querySelector("#tableServiceQuality");
@@ -164,6 +169,7 @@ const 주문멘트 = document.querySelector("#주문멘트");
 
 //1. IMG를 누루면 그에 맞는 서비스목록창을 보여준다.
 $(".instarIMG").click(function () {
+  $(".home주문방식").hide();
   $("#instarOrderContainer").toggle();
   $("#youtubeOrderContainer").hide();
   $("#tiktokOrderContainer").hide();
@@ -175,6 +181,7 @@ $(".instarIMG").click(function () {
 });
 
 $(".youtubeIMG").click(function () {
+  $(".home주문방식").hide();
   $("#instarOrderContainer").hide();
   $("#youtubeOrderContainer").toggle();
   $("#tiktokOrderContainer").hide();
@@ -186,6 +193,7 @@ $(".youtubeIMG").click(function () {
 });
 
 $(".tiktokIMG").click(function () {
+  $(".home주문방식").hide();
   $("#instarOrderContainer").hide();
   $("#youtubeOrderContainer").hide();
   $("#tiktokOrderContainer").toggle();
@@ -197,6 +205,7 @@ $(".tiktokIMG").click(function () {
 });
 
 $(".facebookIMG").click(function () {
+  $(".home주문방식").hide();
   $("#instarOrderContainer").hide();
   $("#youtubeOrderContainer").hide();
   $("#tiktokOrderContainer").hide();
@@ -208,6 +217,7 @@ $(".facebookIMG").click(function () {
 });
 
 $(".twitterIMG").click(function () {
+  $(".home주문방식").hide();
   $("#instarOrderContainer").hide();
   $("#youtubeOrderContainer").hide();
   $("#tiktokOrderContainer").hide();
@@ -219,6 +229,7 @@ $(".twitterIMG").click(function () {
 });
 
 $(".pinterestIMG").click(function () {
+  $(".home주문방식").hide();
   $("#instarOrderContainer").hide();
   $("#youtubeOrderContainer").hide();
   $("#tiktokOrderContainer").hide();
@@ -230,6 +241,7 @@ $(".pinterestIMG").click(function () {
 });
 
 $(".telegramIMG").click(function () {
+  $(".home주문방식").hide();
   $("#instarOrderContainer").hide();
   $("#youtubeOrderContainer").hide();
   $("#tiktokOrderContainer").hide();
@@ -241,6 +253,7 @@ $(".telegramIMG").click(function () {
 });
 
 $(".webIMG").click(function () {
+  $(".home주문방식").hide();
   $("#instarOrderContainer").hide();
   $("#youtubeOrderContainer").hide();
   $("#tiktokOrderContainer").hide();
