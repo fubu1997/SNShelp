@@ -1,14 +1,14 @@
 .mainImg {
   max-width: 890px;
-  width: 100%;
+  width: 80%;
   margin: 10px auto;
   padding: 0 15px;
   text-align: center;
 }
 .mainImg img {
   cursor: pointer;
-  width: 100px;
-  height: 100px;
+  width: 20%;
+  height: 100%;
   margin: 10px;
 }
 
@@ -228,8 +228,9 @@ footer p {
   }
 
   .mainImg img {
-    width: 70px;
-    height: 70px;
-    margin: 5px;
+    cursor: pointer;
+    width: 20%;
+    height: 100%;
+    margin: 1%;
   }
 }
