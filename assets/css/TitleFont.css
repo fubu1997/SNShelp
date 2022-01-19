@@ -1,0 +1,8 @@
+@font-face {
+  src: url("../fonts/kaushan.otf");
+  font-family: "kaushan";
+}
+
+h1 {
+  font-family: "kaushan";
+}
