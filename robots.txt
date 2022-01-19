@@ -1,0 +1,3 @@
+User-agent: *
+Allow:/
+Sitemap: https://marketersns.com/sitemap.xml
