@@ -674,6 +674,7 @@ body {
 ================================================== */
 .hero {
   background: url(../img/background.jpg) no-repeat center / cover;
+  background-attachment: fixed;
   height: 100%;
   width: 100%;
   display: table;
