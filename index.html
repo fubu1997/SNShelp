@@ -123,6 +123,10 @@
               id="instarOrder"
               onchange="instarOrderFunc(this)">
               <option value="instar0">인스타그램 서비스를 선택해주세요</option>
+              <option value="instar12">인게이지먼트↑ 정기권[Pack]</option>
+              <option value="instar13">팔로워 유입 정기권[Pack]</option>
+              <option value="instar14">랜덤 댓글 정기권[Pack]</option>
+
               <option value="instar1">한국인 팔로워(실계정)</option>
               <option value="instar2">한국인 남자 팔로워(실계정)</option>
               <option value="instar3">한국인 여자 팔로워(실계정)</option>
@@ -141,10 +145,21 @@
               <option value="instar10">이모지 댓글</option>
               <option value="instar11">랜덤 댓글</option>
             </select>
-            <label>주문수량</label>
-            <input id="instarOrderInput" type="text" placeholder="주문수량" />
-            <label>금액[원]</label>
+            <div class="autoPanelDel">
+              <label>주문수량</label>
+              <input id="instarOrderInput" type="text" placeholder="주문수량" />
+            </div>
+
+            <div class="autoPanel" style="display: none;">
+              <label id="newPostLabel">새로운 포스트 갯수</label>
+              <input id="newPost" type="text" placeholder="수량" />
+              <label id="autoPostLikeLabel">포스트당 좋아요 갯수</label>
+              <input id="autoPostLike" type="text" placeholder="수량" />
+            </div>
+            <label id="autoTapPrice">금액[원]</label>
             <input id="instarOrderPriceInput" type="text" placeholder="금액" />
+
+
             <div class="tg-wrap">
               <table class="tg" style="table-layout: fixed">
                 <colgroup>

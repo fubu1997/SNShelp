@@ -341,7 +341,7 @@ function instarOrderFunc(str) {
       function () {
         $("#instarOrderPriceInput").text("");
         $("#instarOrderPriceInput").val(
-          `${($("#instarOrderInput").val() * 22)
+          `${($("#instarOrderInput").val() * 25)
             .toString()
             .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`
         );
@@ -349,7 +349,7 @@ function instarOrderFunc(str) {
     );
     tableServiceNum.innerHTML = "4";
     tableServiceQuality.innerHTML = "UHQ";
-    tableServicePrice.innerHTML = "22,000원";
+    tableServicePrice.innerHTML = "25,000원";
     tableServiceName.innerHTML =
       "💎♀️ 🇰🇷 Instagram Likes [ South Korea - Female ] [ Real & Active ]";
     tableServiceDescription.innerHTML = `좋아요+노출빈도+도달범위+프로필방문(여성)</br>
@@ -364,7 +364,7 @@ function instarOrderFunc(str) {
       function () {
         $("#instarOrderPriceInput").text("");
         $("#instarOrderPriceInput").val(
-          `${($("#instarOrderInput").val() * 22)
+          `${($("#instarOrderInput").val() * 25)
             .toString()
             .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`
         );
@@ -372,7 +372,7 @@ function instarOrderFunc(str) {
     );
     tableServiceNum.innerHTML = "5";
     tableServiceQuality.innerHTML = "UHQ";
-    tableServicePrice.innerHTML = "22,000원";
+    tableServicePrice.innerHTML = "25,000원";
     tableServiceName.innerHTML =
       "💎♂️ 🇰🇷 Instagram Likes [ South Korea - Male ] [ Real & Active ]";
     tableServiceDescription.innerHTML = `좋아요+노출빈도+도달범위+프로필방문(여성)</br>
@@ -387,7 +387,7 @@ function instarOrderFunc(str) {
       function () {
         $("#instarOrderPriceInput").text("");
         $("#instarOrderPriceInput").val(
-          `${($("#instarOrderInput").val() * 35)
+          `${($("#instarOrderInput").val() * 30)
             .toString()
             .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`
         );
@@ -395,7 +395,7 @@ function instarOrderFunc(str) {
     );
     tableServiceNum.innerHTML = "6";
     tableServiceQuality.innerHTML = "UHQ";
-    tableServicePrice.innerHTML = "20,000원";
+    tableServicePrice.innerHTML = "30,000원";
     tableServiceName.innerHTML =
       "💎🇰🇷 Instagram Likes [ South Korea ] [ Real & Active ]";
     tableServiceDescription.innerHTML = `좋아요+노출빈도+도달범위+프로필방문(실제유저)</br>
@@ -519,6 +519,132 @@ function instarOrderFunc(str) {
       작업속도 : 빠른시간 이내</br>
       현재까지 드롭현상 없음`;
   }
+  //정기권 추가 input 보여주기
+  if (str.value == "instar12") {
+    $("#newPostLabel").text(`새로운 포스트 갯수`);
+    $("#autoPostLikeLabel").text(`포스트당 좋아요 갯수`);
+    $(".autoPanel").show();
+    $(".autoPanelDel").hide();
+  } else if (str.value == "instar13") {
+    $(".autoPanel").show();
+    $(".autoPanelDel").hide();
+    $("#newPostLabel").text("주문수량");
+    $("#autoPostLikeLabel").text("일일 유입 팔로워수");
+  } else if (str.value == "instar14") {
+    $("#newPostLabel").text(`새로운 포스트 갯수`);
+    $("#autoPostLikeLabel").text(`포스트당 댓글 갯수`);
+    $(".autoPanel").show();
+    $(".autoPanelDel").hide();
+  } else {
+    $(".autoPanel").hide();
+    $(".autoPanelDel").show();
+  }
+  //인게이지먼트 정기권
+  if (str.value == "instar12") {
+    $("#instarOrderContainer").on(
+      "propertychange change keyup paste input",
+      function () {
+        $("#instarOrderPriceInput").text("");
+        $("#instarOrderPriceInput").val(
+          `${($("#newPost").val() * $("#autoPostLike").val() * 28)
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`
+        );
+      }
+    );
+    tableServiceNum.innerHTML = "12";
+    tableServiceQuality.innerHTML = "UHQ";
+    tableServicePrice.innerHTML = "28,000원";
+    tableServiceName.innerHTML = "인게이지먼트↑ 정기권";
+    tableServiceDescription.innerHTML = `★좋아요 + 노출빈도 + 도달범위 + 프로필방문(실제유저)</br>
+        ★새로 올라오는 포스트에 인게이지먼트 작업이 시작됩니다.</br></br>
+        [★인기게시물 작업 순서 ]</br>
+          1. 인게이지 먼트 ↑ 작업</br>
+          2. 팔로워 유입 작업</br>
+          3. 랜덤 댓글 작업</br></br>
+        게시할 피드 개수와 피드당 좋아요 수 설정</br>
+        [★인기게시물 안내사항 ]</br>
+          - 인게이지먼트 수치가 높아야 인기게시물 순위가 오릅니다</br>
+          - 인게이지먼트 수치는 좋아요, 노출빈도, 팔로워, 프로필방문 등 </br>여러가지 요소가 포함됩니다.</br>
+          - 새 계정은 1달간 1일1포스팅 추천</br>
+          - 새로운 사진, 동영상으로 작업</br></br>
+        [★#해시태그 선택방법 ]</br>
+          - 인게 작업할 키워드 검색 후 인기게시물 오른 해시태그에서 키워드 추출하세요</br>
+          - 해시태그는 15개 권장, 기존 쓰던 해시태그 복사 붙여넣기 금지</br>
+          - 해시태그 중 게시물 수 5000개이하 태그 2~4개정도 포함</br>
+          - 해시태그는 본문 혹은 댓글에 1회 넣어주면 끝`;
+  }
+  //팔로워 유입 정기권
+  if (str.value == "instar13") {
+    $("#instarOrderContainer").on(
+      "propertychange change keyup paste input",
+      function () {
+        $("#instarOrderPriceInput").text("");
+        $("#instarOrderPriceInput").val(
+          `${($("#newPost").val() * 120)
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`
+        );
+      }
+    );
+    tableServiceNum.innerHTML = "13";
+    tableServiceQuality.innerHTML = "UHQ";
+    tableServicePrice.innerHTML = "120,000원";
+    tableServiceName.innerHTML = "팔로워 유입 정기권";
+    tableServiceDescription.innerHTML = `★실제 유저 팔로워가 지속 유입됩니다.</br>
+          ★24시간 단위로 설정된 유저수가 유입됩니다.</br></br>
+          [★인기게시물 작업 순서 ]</br>
+            1. 인게이지 먼트 ↑ 작업</br>
+            2. 팔로워 유입 작업</br>
+            3. 랜덤 댓글 작업</br></br>
+          게시할 피드 개수와 피드당 좋아요 수 설정</br>
+          [★인기게시물 안내사항 ]</br>
+            - 인게이지먼트 수치가 높아야 인기게시물 순위가 오릅니다</br>
+            - 인게이지먼트 수치는 좋아요, 노출빈도, 팔로워, 프로필방문 등 </br>여러가지 요소가 포함됩니다.</br>
+            - 새 계정은 1달간 1일1포스팅 추천</br>
+            - 새로운 사진, 동영상으로 작업</br></br>
+          [★#해시태그 선택방법 ]</br>
+            - 인게 작업할 키워드 검색 후 인기게시물 오른 해시태그에서 키워드 추출하세요</br>
+            - 해시태그는 15개 권장, 기존 쓰던 해시태그 복사 붙여넣기 금지</br>
+            - 해시태그 중 게시물 수 5000개이하 태그 2~4개정도 포함</br>
+            - 해시태그는 본문 혹은 댓글에 1회 넣어주면 끝`;
+  }
+  //랜덤댓글 정기권
+  if (str.value == "instar14") {
+    $("#instarOrderContainer").on(
+      "propertychange change keyup paste input",
+      function () {
+        $("#instarOrderPriceInput").text("");
+        $("#instarOrderPriceInput").val(
+          `${($("#newPost").val() * $("#autoPostLike").val() * 250)
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`
+        );
+      }
+    );
+    tableServiceNum.innerHTML = "14";
+    tableServiceQuality.innerHTML = "UHQ";
+    tableServicePrice.innerHTML = "250,000원";
+    tableServiceName.innerHTML = "팔로워 유입 정기권";
+    tableServiceDescription.innerHTML = `★올라오는 포스트 내용에 맞추어 랜덤댓글 등록.</br>
+            ★포스트 등록시 자동으로 랜덤댓글이 등록됩니다.</br>
+            ★포스트 내용과 관련된 댓글이 등록됩니다.(퀄리티 좋음).</br></br>
+            [★인기게시물 작업 순서 ]</br>
+              1. 인게이지 먼트 ↑ 작업</br>
+              2. 팔로워 유입 작업</br>
+              3. 랜덤 댓글 작업</br></br>
+            게시할 피드 개수와 피드당 좋아요 수 설정</br>
+            [★인기게시물 안내사항 ]</br>
+              - 인게이지먼트 수치가 높아야 인기게시물 순위가 오릅니다</br>
+              - 인게이지먼트 수치는 좋아요, 노출빈도, 팔로워, 프로필방문 등 </br>여러가지 요소가 포함됩니다.</br>
+              - 새 계정은 1달간 1일1포스팅 추천</br>
+              - 새로운 사진, 동영상으로 작업</br></br>
+            [★#해시태그 선택방법 ]</br>
+              - 인게 작업할 키워드 검색 후 인기게시물 오른 해시태그에서 키워드 추출하세요</br>
+              - 해시태그는 15개 권장, 기존 쓰던 해시태그 복사 붙여넣기 금지</br>
+              - 해시태그 중 게시물 수 5000개이하 태그 2~4개정도 포함</br>
+              - 해시태그는 본문 혹은 댓글에 1회 넣어주면 끝`;
+  }
   orderBtn.addEventListener("click", function () {
     tableServiceName.innerText = `아래 멘트를 KakaoTalk 또는 DM 으로 전송해주세요
       결제 : 카카오톡 송금 or 무통장입금
@@ -526,7 +652,8 @@ function instarOrderFunc(str) {
       농협 : 351-1212-4301-33 이경해`;
     tableServiceDescription.innerText = ` 종목 : 인스타그램
     상품명 :${str.options[str.selectedIndex].text}
-    수량 : ${instarOrderInput.value}개
+    New Post : ${$("#newPost").val()}개
+    Quantity : ${$("#autoPostLike").val()}개
     가격 : ${instarOrderPriceInput.value}
     타겟 : ${instarID.value}`;
     copy(tableServiceDescription);
