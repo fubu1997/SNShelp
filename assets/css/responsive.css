@@ -126,6 +126,9 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
   /* CUSTOM RESETS */
+  .hero {
+    background-attachment: initial;
+  }
   h1 {
     font-size: 32px;
   }
