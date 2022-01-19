@@ -68,6 +68,7 @@
   }
   .이용방법페이지 p {
     font-size: 10px;
+    text-align: justify;
   }
 }
 
