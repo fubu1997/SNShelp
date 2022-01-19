@@ -29,10 +29,10 @@ methodInstarBtn.addEventListener("click", function () {
 });
 
 $("#서비스소개Btn").click(function () {
-  $(".이용방법페이지").toggle();
+  $(".이용방법페이지").show();
   $(".아이디확인방법").hide();
 });
 $("#아이디확인방법Btn").click(function () {
   $(".이용방법페이지").hide();
-  $(".아이디확인방법").toggle();
+  $(".아이디확인방법").show();
 });
