@@ -895,6 +895,14 @@
             </div>
           </div>
         </form>
+        <!-- 외부링크 주문버튼 -->
+        <div id="외부링크카톡인스타">
+          <img
+            id="sn"
+            onclick="javascript:executeURLLink()"
+            src="/assets/img/i_kakaotalk.png"
+          />
+        </div>
 
         <div class="confirmation" style="display: none"><p>복사완료.</p></div>
 
@@ -912,6 +920,22 @@
     <script src="assets/js/jquery.slicknav.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="/assets/js/ordertap.js"></script>
+    <!-- 카카오톡 연결 -->
+    <script type="text/javascript" src="/assets/js/kakao.link.js"></script>
+    <script type="text/javascript">
+      //카톡링크
+      function executeURLLink() {
+        kakao.link("talk").send({
+          msg: "뽀로로, 구름빵, 앤그리버드, 로보카폴리 등 어린이용 유튜브애니 감상하세요.",
+          url: "http://m.anne-soft.com/childani",
+          appid: "m.kakao.com",
+          appver: "2.0",
+          appname: "어린이 만화영화",
+          type: "link",
+        });
+      }
+    </script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async=""
